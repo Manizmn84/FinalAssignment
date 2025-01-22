@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
@@ -28,47 +28,50 @@
 \section{repository link}
 \paragraph{\url{https://github.com/Manizmn84/FinalAssignment}}
 
-
 \section{Git and GitHub}
 \subsection{Repository Initialization and Commits}
 
-\paragraph{To set up a repository, first of all,we must have a GitHub account. After creating a GitHub account or logging into the account, we perform the following steps:}
+\paragraph{To set up a repository, first of all, we must have a GitHub account. After creating a GitHub account or logging into the account, we perform the following steps:}
 
 \begin{itemize}
     \item Go to the repository section in your account
     \item Click on New Repository
-    \item Enter the explation in the description field
-    \item Choose wrepository is public or private
-    \item choose add README
-    \item click on create repository 
+    \item Enter the explanation in the description field
+    \item Choose whether the repository is public or private
+    \item Choose "add README"
+    \item Click on create repository 
 \end{itemize}
+
 \subsection{GitHub Actions for LaTeX Compilation}
-\paragraph{Provide a walkthrough of setting up GitHub Actions to automatically compile your LaTeX
-document and any challenges you encountered?}
-\paragraph{To launch a compiler for LaTech with Github action, you must set up a workflow and enter your codes for compilation in the main.yml file.\\ It didn't work with tags on my system, so I had to go with push.
-One of the challenges I faced was that when I wanted to do it with tags, it wouldn't work and I had to proceed with a push-up mode.}
+\paragraph{Provide a walkthrough of setting up GitHub Actions to automatically compile your LaTeX document and any challenges you encountered.}
+\paragraph{To launch a compiler for LaTeX with GitHub actions, you must set up a workflow and enter your codes for compilation in the `main.yml` file. It didn't work with tags on my system, so I had to go with push. One of the challenges I faced was that when I wanted to do it with tags, it wouldn't work, and I had to proceed with a push mode.}
 
 \section{Exploration Tasks}
 \subsection{Vim Advanced Features}
-\paragraph{Explore and document 3 advanced features of Vim that were not covered in class?}
-\paragraph{hear of three advance feature in vim:}
+\paragraph{Explore and document 3 advanced features of Vim that were not covered in class:}
 
 \begin{enumerate}
-    \item One of Vim's features is macros, with the help of which you can record a sequence of keystrokes that can be executed with only one keystroke. The reason for using this feature is clear from the fact that in text editing and in programming, some tasks need to be executed over and over again. We can call this task repetitive tasks, for example, we can refer to formatting code or generating boilerplate text.
-    \item Vim's another feature is a tabbed interface which allows you to open many files and switch between them easily .this can be usefull to save your time while you working. Tabs support multiple windows, making it easy to work with multiple files in same time.
-    \item last feature is the folding, which is provided for programmers and some people who work with huge documents, this feature allows you to fold and unfold sections of text, making it easy to navigate and work with large files.this feature is useful for saving time and no need to spend time to transport in large documents.
+    \item One of Vim's features is macros, which allows you to record a sequence of keystrokes that can be executed with only one keystroke. This feature is useful for repetitive tasks, such as formatting code or generating boilerplate text.
+    \item Another feature of Vim is the tabbed interface, which allows you to open many files and switch between them easily. This can be useful to save time when working with multiple files.
+    \item The last feature is folding, which is useful for programmers and those working with large documents. It allows you to fold and unfold sections of text, making it easier to navigate and work with large files.
 \end{enumerate}
 
 \subsection{Memory profiling}
 \subsubsection{Memory Leak}
-\paragraph{In short, explain what memory leaks are and how they might happen in your program?}
-\paragraph{A memory leak occurs when a programmer allocates memory and does not free it}
-\paragraph{If we don't free the allocated memory, the possibility of memory leak is high}
-
+\paragraph{\small A memory leak occurs when a programmer allocates memory but fails to free it.}
 
 \subsubsection{Memory profilers}
-\paragraph{Read about a tool called Valgrind and write about their purpose and how it helps when memory leaks happen.?}
-\paragraph{valgrind is amazing tool witch is use for identification allocated memory.if we allocate a part of memory and we did not free it in purpose and then we open this application we will see that it has tell us about the allocated memory and free memory and the size of memory witch is allocated}
+\paragraph{\small Valgrind is an amazing tool used for identifying allocated memory. If you allocate memory and do not free it, Valgrind will detect it and provide information on allocated and freed memory, as well as the size of allocated memory.}
 
+\subsection{GNU Linux Bash Scripting}
+\subsubsection{fzf}
+\paragraph{\small Fuzzy search is a search algorithm that allows users to ignore minor errors, such as misspellings, in one or a few letters of a word.}
+\paragraph{\small To install `fzf` and understand the command: \texttt{ls | fzf}, this command helps you navigate and select files or directories using fuzzy search. The `ls` command lists the files, and with `fzf`, you can quickly search through them.}
+
+\subsubsection{Using fzf to find your favorite PDF}
+\paragraph{\small To find a specific PDF file quickly, install `fd` and run \texttt{fd -e pdf} to list all PDF files in a directory. You can refine the search with \texttt{fd -t -e pdf} to search within subdirectories as well. To select a specific file, use \texttt{fd -t pdf -E '.*' file name | fzf}.}
+
+\subsubsection{Opening the file using Zathura}
+\paragraph{\small To open the selected file in Zathura, use the command: \texttt{fd -t pdf -E '.*' | fzf \&\& zathura (\$cat -)}}. The \texttt{cat -} command passes stdin to Zathura, allowing it to open and display the selected file.}
 
 \end{document}
