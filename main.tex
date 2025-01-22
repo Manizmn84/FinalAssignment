@@ -72,6 +72,6 @@
 \paragraph{\small To find a specific PDF file quickly, install `fd` and run \texttt{fd -e pdf} to list all PDF files in a directory. You can refine the search with \texttt{fd -t -e pdf} to search within subdirectories as well. To select a specific file, use \texttt{fd -t pdf -E '.*' file name | fzf}.}
 
 \subsubsection{Opening the file using Zathura}
-\paragraph{\small To open the selected file in Zathura, use the command: \texttt{fd -t pdf -E '.*' | fzf \&\& zathura (\$cat -)}}. The \texttt{cat -} command passes stdin to Zathura, allowing it to open and display the selected file.}
+\paragraph{\small To open the selected file in Zathura, use the command: \texttt{fd -t pdf -E '.*' | fzf \&\& zathura (\$cat -)}. The \texttt{cat -} command passes stdin to Zathura, allowing it to open and display the selected file.}
 
 \end{document}
