@@ -10,7 +10,7 @@
 \setlength{\headheight}{15pt}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Computer Workshop Course}
+\rhead{CW403}
 \lhead{Final Assignment}
 \rfoot{Page \thepage}
 
@@ -24,9 +24,6 @@
 \newpage
 \tableofcontents
 \newpage
-
-\section{repository link}
-\paragraph{\url{https://github.com/Manizmn84/FinalAssignment}}
 
 \section{Git and GitHub}
 \subsection{Repository Initialization and Commits}
@@ -73,13 +70,18 @@ Provide a walkthrough of setting up GitHub Actions to automatically compile
 
 \subsection{Memory profiling}
 \subsubsection{Memory Leak}
-\noindent{\small A memory leak occurs when a programmer allocates memory but fails to free it. f we don’t free the allocated memory, the possibility of memory leak is high}
+\noindent{\small A memory leak occurs when a program allocates memory dynamically, but the allocated memory is not properly deallocated or freed after it is no longer needed. This happens when references to the allocated memory are lost, or the programmer forgets to release it manually in languages like C or C++ where memory management is the developer's responsibility.
+
+Memory leaks can lead to a gradual increase in memory usage, which may eventually exhaust the available memory and cause the program or even the entire system to slow down or crash. For example, if a program repeatedly allocates memory for objects without freeing them, it can lead to wasted resources that are no longer accessible but are still occupying memory space.}
 
 \subsubsection{Memory profilers}
-\noindent{\small valgrind is amazing tool witch is use for identification allocated memory.if we
- allocate a part of memory and we did not free it in purpose and then we open
- this application we will see that it has tell us about the allocated memory and
- free memory and the size of memory witch is allocated.}
+\noindent{\small Valgrind is an advanced and powerful tool designed primarily for debugging, profiling, and memory analysis in programs. It is widely used to identify issues related to dynamically allocated memory, such as memory leaks, invalid memory access, and improper deallocation.
+
+When a program allocates memory but fails to free it, Valgrind can help by analyzing the program during its execution and reporting details about the memory usage. It provides a detailed breakdown of the allocated memory blocks, the size of each allocation, and whether they have been freed properly. Valgrind also detects memory leaks by identifying memory that remains allocated but is no longer accessible at the end of the program's runtime.
+
+For instance, if you write a program that uses malloc in C to allocate memory but forget to call free to release it, Valgrind will alert you to the memory that has been leaked. Additionally, it provides the exact location in your code where the memory was allocated, making it easier to identify and fix the issue.
+
+Overall, Valgrind is an essential tool for developers working in languages like C or C++ where memory management is manual. By using Valgrind, developers can ensure their programs are more efficient, stable, and free from memory-related bugs.}
 
 \subsection{GNU Linux Bash Scripting}
 \subsubsection{fzf}
